@@ -44,8 +44,8 @@ p {
 
 
 .btn-primary {
-    border-color: #FF432E;
-    background-color: #FF432E;
+    border-color: #318CE7;
+    background-color: #318CE7;
     text-transform: uppercase;
     font-weight: 300;
     color: #fff;
@@ -65,7 +65,7 @@ p {
 .btn-primary.active,
 .open .dropdown-toggle.btn-primary {
     color: #fff;
-    border-color: #ea321e;
+    border-color: #318CE7;
     background-color: none !important;
 }
 
@@ -546,7 +546,7 @@ and (max-width : 1199px) {
 
 .custom-tab .nav-tabs.nav-justified {
     margin-bottom: 20px;
-    background: #FF432E;
+    background: #318CE7;
 }
 
 .custom-tab .nav-tabs.nav-justified > li {
@@ -671,6 +671,10 @@ and (max-width : 991px) {
 
 .team {
     text-align: justify;
+}
+
+.team_name {
+    color: #318CE7;
 }
 .team-member {
     position: relative;
@@ -818,7 +822,7 @@ and (max-width : 991px) {
 
 .footer-social {
     padding: 78px 0;
-    border: 1px solid #FF432E;
+    border: 1px solid #318CE7;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     -o-border-radius: 3px;
@@ -895,7 +899,7 @@ and (max-width : 991px) {
 }
 
 .contact .form-group textarea.form-control {
-    height: 236px;
+    height: 149px;
 }
 
 .contact::-webkit-input-placeholder {
@@ -927,7 +931,7 @@ and (max-width : 991px) {
 }
 
 .contact .text-danger {
-    color: #e74c3c;
+    color: #318CE7;
 }
 
 .contact button {
@@ -942,7 +946,7 @@ and (max-width : 991px) {
 
 .contact .btn-primary:hover {
     background: transparent;
-    color: #FF432E;
+    color: #318CE7;
 }
 
 

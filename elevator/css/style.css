@@ -669,7 +669,9 @@ and (max-width : 991px) {
 
 /**** Start Team Member Section ****/
 
-
+.team {
+    text-align: justify;
+}
 .team-member {
     position: relative;
     width: 100%;

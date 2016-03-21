@@ -120,7 +120,7 @@
 		checks: [],
 		timeout: null,
 
-		//process the queue
+		process the queue
 		checkAll: function() {
 			var length = $.fn.appear.checks.length;
 			if (length > 0) while (length--) ($.fn.appear.checks[length])();
@@ -129,7 +129,7 @@
 		//check the queue asynchronously
 		run: function() {
 			if ($.fn.appear.timeout) clearTimeout($.fn.appear.timeout);
-			//$.fn.appear.timeout = setTimeout($.fn.appear.checkAll, 20);
+			$.fn.appear.timeout = setTimeout($.fn.appear.checkAll, 600); //Timeout à régler pour eviter le scroll
 		}
 	});
 

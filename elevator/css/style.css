@@ -752,16 +752,16 @@ and (max-width : 991px) {
 }
 
 .latest-post h4 {
-    padding-top: 20px;
+    /*padding-top: 20px;*/
     padding-bottom: 5px;
 }
 
 .latest-post h4 a {
-    color: #FF432E;
+    color: #318CE7;
 }
 
 .latest-post .post-details li {
-    color: #FF432E;
+    color: #318CE7;
     display: inline;
     font-size: 13px;
     color: #999;
@@ -770,7 +770,7 @@ and (max-width : 991px) {
 
 .latest-post .post-details li i {
     padding-right: 5px;
-    color: #FF432E;
+    color: #318CE7;
 }
 
 .latest-post p {
@@ -784,7 +784,9 @@ and (max-width : 991px) {
 
 /**** Start Contact Section ****/
 
-
+.coordonne_contact {
+    display: inline-block;
+}
 .footer-contact-info {
     background: #FF432E;
     color: #fff;

@@ -45,7 +45,33 @@
     </head>
     
     <body>
+   
+                                    <!--powerpoint reading start -->>
+                                    <script type="text/javascript">
+                                    //Initilize start value to 1 'For Slide1.GIF'
+                                    var currentIndex = 1;
+                                    var maxIndex=13;
 
+                                    function swapImage(imageIndex){
+                                    //Check if we are at the last image already, return if we are.
+                                        if(imageIndex>maxIndex){
+                                            currentIndex=maxIndex;
+                                            return;
+                                        }
+
+                                    //Check if we are at the first image already, return if we are.
+                                        if(imageIndex<1){
+                                            currentIndex=1;
+                                            return;
+                                        }
+
+                                    currentIndex=imageIndex;
+                                    //Otherwise update mainImage
+                                    document.getElementById("mainImage").src='Slide' +  currentIndex  + '.GIF';
+                                    return;
+                                    }
+                                    </script>
+                                <!-- powerpoint reading end -->
         <!-- start facebook video integration javascript -->
         <div id="fb-root"></div>
         <script>(function(d, s, id) {
@@ -100,7 +126,7 @@
                                 <ol class="carousel-indicators">
                                     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
                                     <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                                    <!-- <li data-target="#carousel-example-generic" data-slide-to="2"></li> -->
+                                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
                                 </ol>
 
                                 <!-- Wrapper for slides -->
@@ -109,12 +135,11 @@
                                         <iframe width="560" height="330" src="https:/youtube.com/embed/Ga_FZimd9mI" frameborder="0" allowfullscreen></iframe>
                                     </div>
                                     <div class="item">
+                                       <iframe width="560" height="330" src="liendutrailer" frameborder="0" allowfullscreen></iframe>
+                                    </div>
+                                    <div class="item">
                                        <iframe width="560" height="330" src="https://www.youtube.com/embed/NtcG5HpwnfM" frameborder="0" allowfullscreen></iframe>
                                     </div>
-                                    <!-- <div class="item">
-                                        <div class="fb-video" data-href="https://www.facebook.com/100011332814324/videos/162973854090374/" data-width="500">
-                                        </div>
-                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -279,8 +304,24 @@
                                 <div class="tab-content">
 
                                     <div class="tab-pane active" id="tab-1">
+                                    
                                         <p>Il sera présenté durant l'amphi et nous posterons le powerpoint utilisé directement dans cette section</p>
-                                     </div>
+                                        <img src="Slide1.GIF" id="mainImage" name="mainImage" width="100%" height="100%" alt="">
+                                        <div class="row">
+                                            <div class="col-xs-1">
+                                        <a href="#" onclick="swapImage(0);"><i class="fa fa-backward"></i></a>
+                                            </div>
+                                            <div class="col-xs-offset-4 col-xs-1">
+                                                <a href="#" onclick="swapImage(currentIndex-1);"><i class="fa fa-arrow-left"></i></a>
+                                            </div>
+                                            <div class="col-xs-offset-1 col-xs-1">
+                                                <a href="#" onclick="swapImage(currentIndex+1);"><i class="fa fa-arrow-right"></i></a>
+                                            </div>
+                                            <div class="col-xs-offset-4">
+                                        <a href="#" onclick="swapImage(maxIndex);"><i class="fa fa-forward" style="float:right;"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
 
 
                                     <div class="tab-pane" id="tab-2">
@@ -303,202 +344,6 @@
         </div>
         <!-- End About Us Section -->
         
-        
-        <!-- Start Service Section -->
-        <div class="section-modal modal fade" id="service-modal" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-content">
-                <div class="close-modal" data-dismiss="modal">
-                    <div class="lr">
-                        <div class="rl">
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title text-center">
-                            <h3>Our Services</h3>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="feature-2">
-                                <div class="media">
-                                    <i class="fa fa-magic pull-left"></i>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">Web Design</h4>
-                                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- /.col-md-4 -->
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="feature-2">
-                                <div class="media">
-                                    <i class="fa fa-css3 pull-left"></i>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">HTML5 & CSS3</h4>
-                                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- /.col-md-4 -->
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="feature-2">
-                                <div class="media">
-                                    <i class="fa fa-wordpress pull-left"></i>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">Wordpress Theme</h4>
-                                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- /.col-md-4 -->
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="feature-2">
-                                <div class="media">
-                                    <i class="fa fa-plug pull-left"></i>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">Wordpress Plugin</h4>
-                                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- /.col-md-4 -->
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="feature-2">
-                                <div class="media">
-                                    <i class="fa fa-joomla pull-left"></i>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">Joomla Template</h4>
-                                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- /.col-md-4 -->
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="feature-2">
-                                <div class="media">
-                                    <i class="fa fa-cube pull-left"></i>
-                                    <div class="media-body">
-                                        <h4 class="media-heading">Joomla Extension</h4>
-                                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor. reprehenderit</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- /.col-md-4 -->
-                        
-                    </div><!-- /.row -->
-                </div>
-                
-                <div class="pricing-section">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-3 col-sm-6">
-                                <div class="pricing-table">
-                                    <div class="plan-name">
-                                        <h3>Free</h3>
-                                    </div>
-                                    <div class="plan-price">
-                                        <div class="price-value">$49<span>.00</span></div>
-                                        <div class="interval">per month</div>
-                                    </div>
-                                    <div class="plan-list">
-                                        <ul>
-                                            <li>40 GB Storage</li>
-                                            <li>40GB Transfer</li>
-                                            <li>10 Domains</li>
-                                            <li>20 Projects</li>
-                                            <li>Free installation</li>
-                                        </ul>
-                                    </div>
-                                    <div class="plan-signup">
-                                        <a href="#" class="btn-system btn-small">Sign Up Now</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6">
-                                <div class="pricing-table">
-                                    <div class="plan-name">
-                                        <h3>Standard</h3>
-                                    </div>
-                                    <div class="plan-price">
-                                        <div class="price-value">$49<span>.00</span></div>
-                                        <div class="interval">per month</div>
-                                    </div>
-                                    <div class="plan-list">
-                                        <ul>
-                                            <li>40 GB Storage</li>
-                                            <li>40GB Transfer</li>
-                                            <li>10 Domains</li>
-                                            <li>20 Projects</li>
-                                            <li>Free installation</li>
-                                        </ul>
-                                    </div>
-                                    <div class="plan-signup">
-                                        <a href="#" class="btn-system btn-small">Sign Up Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 col-sm-6">
-                                <div class="pricing-table">
-                                    <div class="plan-name">
-                                        <h3>Premium</h3>
-                                    </div>
-                                    <div class="plan-price">
-                                        <div class="price-value">$49<span>.00</span></div>
-                                        <div class="interval">per month</div>
-                                    </div>
-                                    <div class="plan-list">
-                                        <ul>
-                                            <li>40 GB Storage</li>
-                                            <li>40GB Transfer</li>
-                                            <li>10 Domains</li>
-                                            <li>20 Projects</li>
-                                            <li>Free installation</li>
-                                        </ul>
-                                    </div>
-                                    <div class="plan-signup">
-                                        <a href="#" class="btn-system btn-small">Sign Up Now</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-3 col-sm-6">
-                                <div class="pricing-table">
-                                    <div class="plan-name">
-                                        <h3>Professional</h3>
-                                    </div>
-                                    <div class="plan-price">
-                                        <div class="price-value">$49<span>.00</span></div>
-                                        <div class="interval">per month</div>
-                                    </div>
-                                    <div class="plan-list">
-                                        <ul>
-                                            <li>40 GB Storage</li>
-                                            <li>40GB Transfer</li>
-                                            <li>10 Domains</li>
-                                            <li>20 Projects</li>
-                                            <li>Free installation</li>
-                                        </ul>
-                                    </div>
-                                    <div class="plan-signup">
-                                        <a href="#" class="btn-system btn-small">Sign Up Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        <!-- End Service Section -->
-        
-        
         <!-- Start Team Member Section -->
         <div class="section-modal modal fade" id="team-modal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-content">
@@ -518,15 +363,15 @@
                     </div>
                     <div class="row">
                         
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             <div class="team-member">
-                                <img src="images/profil/clement.gif" class="img-responsive" alt="">
+                                <img src="images/profil/nouvelle/clement.jpg" class="img-responsive" alt="">
                                 <br/>
                                 <div align="center" class="team_name"><b>Clément COUNIL</b></div>
                             </div>
                         </div>
 
-                        <div class="col-md-9 col-md-offset-1">
+                        <div class="col-md-9">
                             <b>Président</b><br/><br/>
                             Passionné de sport collectif depuis toujours, addict à l’esprit d'équipe, Clément fait du handball en compétition depuis plus de 16 ans et a évolué du championnat régional jusqu’au championnat de France jeune et continue de pratiquer au club d’Evry.Il pratique aussi le volley en loisir et est amateur de sport de glisse, du wakeboard au skate en passant par le snowboard. Parlons d'ailleurs du surf, puisque Clément en fait depuis tout petit : la côte atlantique est sa maison et dès qu’il en a l’occasion, il va surfer lorsque la houle se lève.Fou de sport, Clément compte faire profiter et partager cette passion qui lui est chère à tout le campus.
                         </div>
@@ -541,10 +386,10 @@
                             <b>Vice-Présidence</b><br/><br/>
                             Cette année la Vice-Présidence est composé de trois personnes car plus il y a de fous plus on rit! Camille, Jonathan et Kevin sont les bras droits de Clement et lui permettent de réussir ses CFs. Adepte des sports collectifs, ils sont les as de la communication dans notre liste.
                         </div>
-
+                        <br/>
                         <div class="col-md-2 col-xs-4">
                             <div class="team-member">
-                                <img src="images/profil/keke.png" class="img-responsive" alt="">
+                                <img src="images/profil/nouvelle/kevin.png" class="img-responsive" alt="">
                                 <br/>
                                 <div align="center" class="team_name"><b>Kévin GUILBERT</b><br/></div>
                                 <div align="center"><b>TSP</b></div>
@@ -554,7 +399,7 @@
 
                         <div class="col-md-2 col-xs-4">
                             <div class="team-member">
-                                <img src="images/profil/Camille.png" class="img-responsive" alt="">
+                                <img src="images/profil/nouvelle/camille.png" class="img-responsive" alt="">
                                     <br/>
                                     <div align="center" class="team_name"><b>Camille BERCARU</b><br/></div>   
                                     <div align="center"><b>TEM</b></div>
@@ -563,7 +408,7 @@
 
                         <div class="col-md-2 col-xs-4">
                             <div class="team-member">
-                                <img src="images/profil/Jonathan.png" class="img-responsive" alt="">
+                                <img src="images/profil/nouvelle/jonathan.png" class="img-responsive" alt="">
                                 <br/>
                                 <div align="center" class="team_name"><b>Jonathan BETITO</b><br/></div>
                                 <div align="center"><b>Bachelor</b></div>
@@ -578,7 +423,7 @@
 
                         <div class="col-md-2 col-xs-6">
                             <div class="team-member">
-                                <img src="images/profil/marie.png" class="img-responsive" alt="">
+                                <img src="images/profil/nouvelle/marie.png" class="img-responsive" alt="">
                                 <br/>
                                 <div align="center" class="team_name">Marie ROLLET-FLAUBERT</div>
                                 <br/>
@@ -588,7 +433,7 @@
 
                         <div class="col-md-2 col-xs-6">
                             <div class="team-member">
-                                <img src="images/profil/Mehdi.png" class="img-responsive" alt="">
+                                <img src="images/profil/nouvelle/mehdi.png" class="img-responsive" alt="">
                                 <br/>
                                 <div align="center" class="team_name"><b>Méhdi Belakhdhar</b></div>
                                 <br/>
@@ -596,7 +441,7 @@
                             
                         </div>
 
-                        <div class="col-md-7 col-md-offset-1">
+                        <div class="col-md-8">
                             <b>Sécrétariat</b><br/><br/>
                             Réussir sa campagne, c'est d'abord s'organiser soi-mÍme, et organiser tout ce qui tourne autour du travail qu'on fait. Mehdi et Marie, un mélange de calme, d'assiduité et de pouvoir d'écoute, se sont présentés pour remplir ce poste ò combien essentiel au sein de notre liste. Ces deux oursons forment un lien essentiel entre la liste et l'adminsitration de l'école, afin de programmer chaque stand et événement, et seront évidemment là pour les négociations futures avec l'ADM pour voir un INT qui évolue sans arrêt.
                         </div>
@@ -606,23 +451,23 @@
 
                     <div class="row">
 
-                        <div class="col-md-6">
+                        <div class="col-md-8">
                             <b>Trésorie</b><br/><br/>
                             Un des pôles les plus vitaux, la trésorerie. 
                             Chez Audace, ce pôle est plein de vitalité et prêt à remuer terre et ciel afin que les comptes restent toujours dans le positif sans pour autant renoncer à nombre de dépenses. Sinon, en cas de pépin, Billy leur tombera dessus. L’objectif sera de développer la pratique de nouveaux sports au sein et à l’extérieur du campus dans la limite du budget alloué.
                         </div>
-
-                        <div class="col-md-3 col-xs-6">
+                        <br/>
+                        <div class="col-md-2 col-xs-6">
                             <div class="team-member">
-                                <img src="images/profil/lucas.png" class="img-responsive" alt="">
+                                <img src="images/profil/nouvelle/lucas.png" class="img-responsive" alt="">
                                 <br/>
                                 <div align="center" class="team_name"><b>Lucas SIRVENT</b></div>
                             </div>  
                         </div>
 
-                        <div class="col-md-3 col-xs-6">
+                        <div class="col-md-2 col-xs-6">
                             <div class="team-member">
-                                <img src="images/profil/LASSana.png" class="img-responsive" alt="">
+                                <img src="images/profil/nouvelle/lassana.png" class="img-responsive" alt="">
                                 <br/>
                                 <div align="center" class="team_name">Lassana DIAKHITE</div>
                             </div>
@@ -635,16 +480,16 @@
 
                         <div class="col-md-2 col-xs-6">
                             <div class="team-member">
-                                <img src="images/profil/Max.png" class="img-responsive" alt="">
+                                <img src="images/profil/nouvelle/max.png" class="img-responsive" alt="">
                                 <br/>
                                 <div align="center" class="team_name">Maximilien DE NAVARRE</div>
                                 <br/>
                             </div>
                         </div>
 
-                        <div class="col-md-3 col-xs-6">
+                        <div class="col-md-2 col-xs-6">
                             <div class="team-member">
-                                <img src="images/profil/Baptou.png" class="img-responsive" alt="">
+                                <img src="images/profil/nouvelle/baptiste.png" class="img-responsive" alt="">
                                 <br/>
                                 <div align="center" class="team_name">Baptiste JEAN</div>
                                 <br/>
@@ -654,7 +499,7 @@
                     <!-- div class="row"> -->
                         <div class="col-md-2 col-xs-6">
                             <div class="team-member">
-                                <img src="images/profil/bastien.png" class="img-responsive" alt="">
+                                <img src="images/profil/nouvelle/bastien.png" class="img-responsive" alt="">
                                 <br/>
                                 <div align="center" class="team_name">Bastien POURQUE</div>
                                 <br/>
@@ -663,7 +508,7 @@
 
                         <div class="col-md-2 col-xs-6">
                             <div class="team-member">
-                                <img src="images/profil/féfé.png" class="img-responsive" alt="">
+                                <img src="images/profil/nouvelle/felix.png" class="img-responsive" alt="">
                                 <br/>
                                 <div align="center" class="team_name"><b>Félix HANTRAYE</b></div>
                                 <br/>
@@ -671,7 +516,7 @@
                         </div>
                     <!-- </div> <!--end of row-->
 
-                        <div class="col-md-3">
+                        <div class="col-md-4">
                             <b>Relation Entreprise</b><br/><br/>
                             Le pôle RE c'est : Félix, le responsable, avec qui toutes les secrétaires de l’Essone voudraient travailler ; Baptiste, un ancien requin de la finance craint par tout l’INT grâce à son franc parlé ; Bastien, on dit de lui qu’il forçait déjà quand il était encore gamin ; Maximilien, business man en devenir, il pourrait vendre sa mère. A noter que ces hommes en costume ont tous des sexes de 15 cm ou plus au repos. 
                             Bienvenue au pole RE
@@ -685,10 +530,10 @@
                             <b>Sécu-Log</b><br/><br/>
                             Les femmes aussi peuvent remplir un excel et derouler du gaffeur
                         </div>
-
+                        <br/>
                         <div class="col-md-2 col-xs-6">
                             <div class="team-member">
-                                <img src="images/profil/Nolwen.png" class="img-responsive" alt="">
+                                <img src="images/profil/nouvelle/nolwenn.png" class="img-responsive" alt="">
                                 <br/>
                                 <div align="center" class="team_name"><b>Nolwenn DELORD</b></div>
                             </div>  
@@ -696,7 +541,7 @@
 
                         <div class="col-md-2 col-xs-6">
                             <div class="team-member">
-                                <img src="images/profil/SOSO.png" class="img-responsive" alt="">
+                                <img src="images/profil/nouvelle/sophie.png" class="img-responsive" alt="">
                                 <br/>
                                 <div align="center" class="team_name">Sophie BACHELIER</div>
                             </div>
@@ -707,9 +552,9 @@
 
                     <div class="row">
 
-                        <div class="col-md-3 col-xs-6">
+                        <div class="col-md-2 col-xs-6">
                             <div class="team-member">
-                                <img src="images/profil/THIBAUT.png" class="img-responsive" alt="">
+                                <img src="images/profil/nouvelle/thibaud.png" class="img-responsive" alt="">
                                 <br/>
                                 <div align="center" class="team_name">Thibaud PERBET</div>
                                 <br/>
@@ -718,7 +563,7 @@
 
                         <div class="col-md-2 col-xs-6">
                             <div class="team-member">
-                                <img src="images/profil/Lowla.png" class="img-responsive" alt="">
+                                <img src="images/profil/nouvelle/lola.png" class="img-responsive" alt="">
                                 <br/>
                                 <div align="center" class="team_name"><b>Lola BOUJU</b></div>
                                 <br/>
@@ -726,7 +571,7 @@
                         </div>
 
 
-                        <div class="col-md-7">
+                        <div class="col-md-8">
                             <b>Soirée</b><br/><br/>
                             Thibaud et Lola : l'un est toujours chaud, Thibaud le jour, Billy la nuit; l'autre volleyeuse depuis le berceau, elle est deja respo et s'appliquera à vous enjailler jusqu'au bout de la nuit.
                         </div>
@@ -739,10 +584,10 @@
                             <b>Web</b><br/><br/>
                             Pôle indispensable de la liste, c'est deux membres au corps de rêve ont su travailler l'éfficacité de leur doigté afin de mieux taper du code sur un clavier mais pas que... Mesdemoiselles attention à vous et à vos ordi
                         </div>
-
+                        <br/>
                         <div class="col-md-2 col-xs-6">
                             <div class="team-member">
-                                <img src="images/profil/AUbry.png" class="img-responsive" alt="">
+                                <img src="images/profil/nouvelle/aubry.png" class="img-responsive" alt="">
                                 <br/>
                                 <div align="center" class="team_name"><b>Clément AUBRY</b></div>
                             </div>  
@@ -750,7 +595,7 @@
 
                         <div class="col-md-2 col-xs-6">
                             <div class="team-member">
-                                <img src="images/profil/jeremy.png" class="img-responsive" alt="">
+                                <img src="images/profil/nouvelle/jeremy.png" class="img-responsive" alt="">
                                 <br/>
                                 <div align="center" class="team_name">Jérémy VENIN</div>
                             </div>
@@ -761,18 +606,18 @@
 
                     <div class="row">
 
-                        <div class="col-md-3 col-xs-6">
+                        <div class="col-md-2 col-xs-6">
                             <div class="team-member">
-                                <img src="images/profil/Gabi.png" class="img-responsive" alt="">
+                                <img src="images/profil/nouvelle/gabi.png" class="img-responsive" alt="">
                                 <br/>
                                 <div align="center" class="team_name">Gabriel BETITO</div>
                                 <br/>
                             </div>
                         </div>
 
-                        <div class="col-md-3 col-xs-6">
+                        <div class="col-md-2 col-xs-6">
                             <div class="team-member">
-                                <img src="images/profil/Leopoldine.png" class="img-responsive" alt="">
+                                <img src="images/profil/nouvelle/leopoldine.png" class="img-responsive" alt="">
                                 <br/>
                                 <div align="center" class="team_name"><b>Leopoldine CHAPPE</b></div>
                                 <br/>
@@ -780,9 +625,9 @@
                         </div>
 
 
-                        <div class="col-md-6">
+                        <div class="col-md-8">
                             <b>Stand</b><br/><br/>
-                            On vous fera découvrir des activitées de malade
+                            On vous fera découvrir des activitées de malade !
                         </div>
                     </div>
                     <hr width="90%" style="border-width:2px;"/>
@@ -792,10 +637,10 @@
                         <b>Communication</b><br/><br/>
                     Nos affiches attirantes qui circulent un peu partout sur Facebook, les mix originaux de couleurs, les uns vont dire que c'est Photoshop, nous on dit que c'est le précieux travail de notre pôle communications. C'est grâce à nos responsables, Marwen et Pauline, qu'on communique à nos confrères ingénieurs et managers les événements qu'on organise, et c'est naturellement grâce à eux qu'on pourra vous communiquer nos événements à venir
                         </div>
-
+                        <br/>
                         <div class="col-md-2 col-xs-6">
                             <div class="team-member">
-                                <img src="images/profil/Marwen.png" class="img-responsive" alt="">
+                                <img src="images/profil/nouvelle/marwen.png" class="img-responsive" alt="">
                                 <br/>
                                 <div align="center" class="team_name"><b>Marwen TALEB</b></div>
                             </div>  
@@ -803,7 +648,7 @@
 
                         <div class="col-md-2 col-xs-6">
                             <div class="team-member">
-                                <img src="images/profil/Paupau.png" class="img-responsive" alt="">
+                                <img src="images/profil/nouvelle/pauline.png" class="img-responsive" alt="">
                                 <br/>
                                 <div align="center" class="team_name">Pauline BOUTON</div>
                             </div>
@@ -816,7 +661,7 @@
 
                         <div class="col-md-2 col-xs-6">
                             <div class="team-member">
-                                <img src="images/profil/COCO.png" class="img-responsive" alt="">
+                                <img src="images/profil/nouvelle/coralie.png" class="img-responsive" alt="">
                                 <br/>
                                 <div align="center"class="team_name">Coralie DIJOUX</div>
                                 <br/>
@@ -825,7 +670,7 @@
 
                         <div class="col-md-2 col-xs-6">
                             <div class="team-member">
-                                <img src="images/profil/Keren.png" class="img-responsive" alt="">
+                                <img src="images/profil/nouvelle/keren.png" class="img-responsive" alt="">
                                 <br/>
                                 <div align="center"class="team_name"><b>Keren BAKASSA</b></div>
                                 <br/>
@@ -846,10 +691,10 @@
                             Younn et Victor ont commencé à skier au moment ou ils apprenaient à marcher. Autant dire qu'ils sont à l'aise sur des skis et savent se débrouiller dans de nombreuses situations. C'est pourquoi ils ont été choisi à ce pole, ils sauront vous trouver la meilleur station pour vous emmener skier pour prendre du plaisir tant la journée que le soir !
                             Comme nous faites leur confiance pour passer un WES de feu en 2017 !!!!
                         </div>
-
+                        <br/>
                         <div class="col-md-2 col-xs-6">
                             <div class="team-member">
-                                <img src="images/profil/VICTOR.png" class="img-responsive" alt="">
+                                <img src="images/profil/nouvelle/victor.png" class="img-responsive" alt="">
                                 <br/>
                                 <div align="center"class="team_name"><b>Victor DELAUNE</b></div>
                             </div>  
@@ -857,7 +702,7 @@
 
                         <div class="col-md-2 col-xs-6">
                             <div class="team-member">
-                                <img src="images/profil/Younn.png" class="img-responsive" alt="">
+                                <img src="images/profil/nouvelle/younn.png" class="img-responsive" alt="">
                                 <br/>
                                 <div align="center"class="team_name">Younn OLIVIER</div>
                             </div>
@@ -871,17 +716,17 @@
                         <b>WEA/Limousin</b><br/><br/>
                             Berenger aka Pampers n'a qu'une limite : l'ADM
                         </div>
-
+                        <br/>
                         <div class="col-md-2">
                             <div class="team-member">
-                                <img src="images/profil/beer.png" class="img-responsive" alt="">
+                                <img src="images/profil/nouvelle/testberenger.png" class="img-responsive" alt="">
                                 <br/>
                                 <div align="center"class="team_name"><b>Berenger DE WILDE</b></div>
                             </div>  
                         </div>
                         <div class="col-md-2">
                             <div class="team-member">
-                                <img src="images/profil/Walid.png" class="img-responsive" alt="">
+                                <img src="images/profil/nouvelle/walid.png" class="img-responsive" alt="">
                                 <br/>
                                 <div align="center"class="team_name"><b>Walid ANSAR</b></div>
                             </br>
@@ -891,7 +736,7 @@
                         </div>
                         <div class="col-md-2">
                             <div class="team-member">
-                                <img src="images/profil/pasca.png" class="img-responsive" alt="">
+                                <img src="images/profil/nouvelle/pascaline.png" class="img-responsive" alt="">
                                 <br/>
                                 <div align="center"class="team_name"><b>Pascaline DE L'ESPINAY</b></div>
                             </div>
@@ -1008,7 +853,7 @@
                     </div>
                     <div class="row" style="padding-top: 100px;">
                         <div class="col-md-2 col-sm-4 col-xs-6">
-                            <img src="images/profil/clement.gif" class="img-responsive" alt="">
+                            <img src="images/profil/nouvelle/clement.jpg" class="img-responsive" alt="">
                         </div>
                         <div class="col-md-7 col-sm-5 col-xs-6">
                             <h4>Les coordonnées du Prez</h4>
